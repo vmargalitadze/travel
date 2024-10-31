@@ -1,0 +1,71 @@
+<%- include('./part/head.ejs') %>
+<body>
+    <%- include('./part/nav.ejs') %> 
+
+   
+    
+    <main>
+        
+        
+        <% if (orders.length <= 0) { %>
+            <h1>Nothing there!</h1>
+            <% } else { %>
+                <ul class="orders">
+                    <% orders.forEach(order => { %>
+                        
+                        <div class="card mt-50 mb-50">
+                            <div class="col d-flex">
+                                <div class="text-muted" id="orderno">  
+                                    <span>Order - # <%= order._id %> </span>
+                                </div>
+                                <div class="gap">
+                                    <div class="col-2 d-flex mx-auto"> </div>
+                                </div>
+                            </div>
+                            <div class="title mx-auto"> Thank you for your order! </div>
+                            <div class="main">
+                                <span id="sub-title">
+                                    <p><b>Payment Summary</b></p>
+                                </span>
+                                <% order.products.forEach(p => { %>
+                                    <div class="row row-main mb-5">
+                                        <div class="col-3"> <img class="img-fluid" src="/<%= p.product.images[0] %>" /> </div>
+                                        <div class="col-6">
+                                            <div class="row d-flex">
+                                                
+                                                <p><b><%= p.product.name %></b></p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-3 d-flex justify-content-end">
+                                            <p><b>$<%= p.product.price %></b></p>
+                                        </div>
+                                    </div>
+                                    <% }); %>
+                                 
+                                </div>
+                            </div>
+                            
+                            <% }); %>
+                            <div class="container">
+                                <div class="card">
+
+                                    <div class="total">
+                                        <div class="row">
+                                            <div class="col"> <b> Total:</b> </div>
+                                            <div class="col d-flex justify-content-end"> <b>$847.95</b> </div>
+                                        </div> <button class="btn d-flex mx-auto"> Track your order </button>
+                                    </div>
+                                </div>
+                                <div class="">
+                                </div>
+                            </div>
+                            
+        <% } %>
+    </main>
+    
+
+    <%- include('./part/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>

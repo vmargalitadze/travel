@@ -1,0 +1,50 @@
+{
+  "name": "mogzauroba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "19.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "vaqsi",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "^1.4.6",
+    "cookieparser": "^0.1.0",
+    "crypto": "^1.0.1",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^5.3.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "leaflet": "^1.9.4",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.1",
+    "mongoose-paginate-v2": "^1.7.31",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^4.6.8",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pagination": "^0.4.6",
+    "pug": "^3.0.2",
+    "stripe": "^7.11.0",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "license": "ISC"
+}

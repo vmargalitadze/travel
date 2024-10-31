@@ -1,0 +1,8 @@
+{
+    "env": {
+        "MONGO_USER": "vaqsi24",
+        "MONGO_PASSWORD": "juventus1990",
+        "MONGO_DEFAULT_DATABASE": "turebi",
+        "STRIPE_KEY": "sk_test_51N04RXCmSyNsrcFLVzNZ54G786g2xbGCQOlYtJX6KFICl33zMmU8HxwWNcBqBYWPYcaSjqV1Vauf6NmQUDej313p00tuZFaDHl"
+    }
+}

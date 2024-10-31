@@ -1,0 +1,29 @@
+<%- include('./part/head.ejs') %>
+<body>
+    <%- include('./part/nav.ejs') %>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class=" mt-5">
+                <div style="margin: 0 auto;" class="col-md-6  text-center">
+            <div class=" h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+            
+                <form class="" action="/reset" method="POST">
+                    <div class="">
+                       
+                        <input class="form-control" placeholder="Email" type="email" name="email" id="email">
+                    </div>
+                    <input type="hidden" name="_csrf" >
+                    <button style="margin: 0 auto;" class="btn button button-secondary btn-block " type="submit">Reset Password</button>
+                </form>
+            
+            </div>
+            
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('./part/script.ejs') %>
+</body>

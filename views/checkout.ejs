@@ -1,0 +1,39 @@
+<%- include('./part/head.ejs') %>
+
+<body>
+    <%- include('./part/nav.ejs') %> 
+    <main>
+        <ul class="cart__item-list">
+            <% products.forEach(p => { %>
+                <li class="cart__item">
+                    <h1><%= p.productId ? p.productId.name : 'Unknown Product' %></h1>
+                    <h2>Quantity: <%= p.quantity %></h2>
+                </li>
+            <% }) %>
+        </ul>
+        <div class="centered">
+            <h2>Total: <%= totalSum %></h2>
+        </div>
+        <div class="centered">
+            <button id="order-btn" class="btn">ORDER</button>
+            <script src="https://js.stripe.com/v3/"></script>
+            <script>
+                var stripe = Stripe(' pk_test_51N04RXCmSyNsrcFLm3GZMWqHqOipUjDGamTFqNmNxmZXW6NfjaibtYuLURdqh4XcrAcPfG8zTzecBS3PqPZ0lQds00SvKP8ZdZ');
+                var orderBtn = document.getElementById('order-btn');
+                orderBtn.addEventListener('click', function() {
+                    stripe.redirectToCheckout({
+                        sessionId: '<%= sessionId %>'
+                    });
+                });
+            </script>
+        </div>
+    </main>
+  
+
+
+
+
+    <%- include('./part/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>

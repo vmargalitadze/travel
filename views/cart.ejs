@@ -1,0 +1,85 @@
+<%- include('./part/head.ejs') %>
+<body>
+
+  <%- include('./part/nav.ejs') %>
+  <main class="page">
+    <div class="shopping-cart">
+      <div class="container">
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12 col-lg-8">
+              <div class="items">
+               
+                  <% products.forEach(p => { %>
+                    <div class="product" style="margin-top: 100px;">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <img src="/<%= p.productId.images[0] %>" class="img-fluid mx-auto d-block image" id="image">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="info">
+                            <div class="">
+                              <div class="col-md-5 product-name">
+                                <div class="product-name">
+                                  <div class="product-info" style="color: #091e40;">
+                                    <div>Name: <span class="value"><%= p.productId.name %></span></div>
+                                    <div>Price: <span class="value">$<%= p.discountedPrice %></span></div>
+                                    <div>Quantity: <span class="value"><%= p.quantity %></span></div>
+                                    <div>Enjoy travel with <span class="value"><%=  p.productId.peopleSize || 'Not defined'%> Person</span></div>
+                                    <form action="/cart-delete-item" method="POST">
+                                      <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                                      <button style="margin-top: 15px;" class="btn  button-secondary mr-3  "><span>Delete</span></button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% }) %>
+               
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="summary">
+                <h3>Summary</h3>
+                <% if (products.length > 0) { %>
+                  <div class="summary-item"><span class="text">Quantity</span><span class="price"><%= products.reduce((total, p) => total + p.quantity, 0) %></span></div>
+                  <div class="summary-item">
+                    <span class="text">Total</span>
+                    <span class="price">$<%= products.reduce((total, p) => total + (p.productId.discount
+                      ? ( (p.productId.discount / 100) * p.productId.price) * p.quantity
+                      : p.productId.price * p.quantity), 0).toFixed(2) %></span>
+                  </div>
+                  <button id="order-btn" class="btn  button-secondary mb-3 mr-3 ">BUY</button>
+                                    <script src="https://js.stripe.com/v3/"></script>
+                                    <script>
+                                        var stripe = Stripe('pk_test_51N04RXCmSyNsrcFLm3GZMWqHqOipUjDGamTFqNmNxmZXW6NfjaibtYuLURdqh4XcrAcPfG8zTzecBS3PqPZ0lQds00SvKP8ZdZ');
+                                        var orderBtn = document.getElementById('order-btn');
+                                        orderBtn.addEventListener('click', function() {
+                                            stripe.redirectToCheckout({
+                                                sessionId: '<%= sessionId %>'
+                                            });
+                                        });
+                                    </script>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+

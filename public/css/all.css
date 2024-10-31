@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+--color: #333; 
+}
+:root{
+    --color: #333; 
+    }
+  
+
+   
+    
+    .container3 {
+      text-align: center;
+      color: var(--color);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url(/img/tours/tour-2-2.jpg) !important;
+      background-size: cover;
+      background-position: center;
+      
+    /*  this is where the magic happens:  */
+      background-attachment: fixed;
+    }
+
+    .container5 {
+      text-align: center;
+      color: var(--color);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url(https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) !important;
+      background-size: cover;
+      background-position: center;
+      
+    /*  this is where the magic happens:  */
+      background-attachment: fixed;
+    }
+    
+    .container4 {
+      text-align: center;
+      color: var(--color);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+     
+      background-size: cover;
+      background-position: center;
+      
+    /*  this is where the magic happens:  */
+      background-attachment: fixed;
+    }
+    
+    
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    
+    .pe {
+      max-width: 85ch;
+      line-height: 1.5;
+      padding: 1em;
+      font-size: 15px;
+      font-weight: 700;
+  }
+    
+    .item2 a {
+      display: inline-block;
+      padding: 1em 3.5em;
+      background-color: var(--color);
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 0.3em;
+      margin-left: 225px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      font-size: .875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .blank, .other {
+      text-align: center;
+      display: flex;
+      width: 100%;
+      height: 20vh;
+      background-color: var(--color);
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+    .second2 {
+      background-image:url(/img/tours/tour-6-cover.jpg);
+      background-attachment: fixed;
+      height: 1078px;
+      width: 100%;
+    }
+
+    .second3 {
+      background-image:url(https://images.unsplash.com/photo-1584003564911-a7a321c84e1c?q=80&w=1884&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-attachment: fixed;
+      height: 1078px;
+      width: 100%;
+    }
+
+
+    @media screen and (max-width:426px) {
+      .second {
+        padding: 50px;
+        height: 100%;
+    }
+
+    .second2, .second3 {
+      height: 100% !important;
+      padding: 50px
+    }
+    }
+    
+    h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-top: 1em;
+    }
+    
+    
+    
+    .item2 {
+      display: flex;
+      max-width: 320px;
+      background-color: white;;
+      flex-direction: column;
+      width: 500px;
+      align-items: center;
+      border-radius: .5em;
+      -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+      -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+      box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    }
+    .tour-item {
+      /* Set the desired width */
+      width: 300px;
+      /* Add additional styling if needed */
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .img {
+      width: 90%;
+      height: 200px;
+      background-color: lightgrey;
+      background-size: cover;
+      background-position: center;
+      margin-top: 20px;
+      border-radius: .3em;;
+    }
+    
+    .img-first {
+      background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+    }
+    
+    .img-second {
+      background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+    }
+    
+    .img-third {
+      background-image: url(https://images.unsplash.com/photo-1632853073412-782bf0279d65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    }
+    
+    .second {
+      flex-direction: row;
+      gap: 1.6em;
+    }
+    
+    .btn:hover{
+      color: white !important;
+    }
+
+    .btn1 {
+      border-radius: 4px;
+      font-size: 13px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 5px;
+      border: none;
+      letter-spacing: .02rem;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease;
+      position: relative;
+      -webkit-transform: skew(-21deg);
+      -ms-transform: skew(-21deg);
+      transform: skew(-21deg);
+  }
+  .btn1 > span {
+    display: inline-block;
+    -webkit-transform: skew(21deg);
+    -ms-transform: skew(21deg);
+    transform: skew(21deg);
+}
+
+.large-font{
+  font-size:xxx-large;
+}
+.top-20{
+  position:relative;
+  top:20vh;
+}
+ion-icon.active{
+  animation:like 0.5s 1;
+  fill:red;
+  stroke:none;
+}
+ion-icon{
+  fill:transparent;
+  stroke:black;
+  stroke-width:30;
+  transition:all 0.5s;
+}
+
+
+@-webkit-keyframes like {
+  0%   { transform: scale(1); }
+  90%   { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
+}
+
+
+.main {
+  height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width:426px)  {
+  .es1{
+    margin-left: 16px !important;
+  }
+  .containerr {
+    width: 0px;
+    background: #fff;
+    margin-left: 0px !important;
+ 
+    
+  }
+}
+
+@media screen and (max-width:426px) {
+  .container3 h1{
+    font-size: 25px;
+  }
+  .container1 h1{
+    font-size: 25px;
+  }
+  .container2 h1{
+    font-size: 25px;
+  }
+  .pe {
+    max-width: 85ch;
+    line-height: 1.5;
+    padding: 1em;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .aq{
+    font-size: 30px;
+  }
+  .mt{
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width:376px) {
+  .container3 h1{
+    font-size: 20px;
+  }
+  .container1 h1{
+    font-size: 20px;
+  }
+  .container2 h1{
+    font-size: 20px;
+  }
+  .pe {
+    max-width: 85ch;
+    line-height: 1.5;
+    padding: 1em;
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+
+
+@media screen and (max-width:1025px)  {
+  a.nav-link.erti{
+    font-size: 13px !important;
+  }
+  
+  
+}
+
+@media screen and (max-width:769px)  {
+  a.nav-link.erti{
+    font-size: 12px !important;
+  }
+  
+  
+}
+
+@media screen and (max-width: 321px) {
+  a.nav-link.erti {
+    font-size: 9px !important;
+  }
+}
+.containerr {
+  width: 100%;
+  margin-top: 50px;
+  background: #fff;
+  margin-left: 200px;
+  display: flex !important;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.appointment-form {
+  padding: 20px 20px 20px;
+}
+input, select {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+  padding: 5px 0;
+  color: #222;
+  margin-bottom: 31px;
+  font-family: roboto slab;
+}
+input, select, textarea {
+  outline: none;
+  appearance: unset!important;
+  -moz-appearance: unset!important;
+  -webkit-appearance: unset!important;
+  -o-appearance: unset!important;
+  -ms-appearance: unset!important;
+}
+user agent stylesheet
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+.form-check {
+  margin-bottom: 20px;
+}
+
+input[type=checkbox]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: none;
+}
+input[type=checkbox] {
+  appearance: checkbox!important;
+  -moz-appearance: checkbox!important;
+  -webkit-appearance: checkbox!important;
+  -o-appearance: checkbox!important;
+  -ms-appearance: checkbox!important;
+}
+input, select {
+  width: 100%;
+  display: block;
+  border: none;n
+  border-bottom: 2px solid #ebebeb;
+  padding: 5px 0;
+  color: #222;
+  margin-bottom: 31px;
+  font-family: roboto slab;
+}
+input, select, textarea {
+  outline: none;
+  appearance: unset!important;
+  -moz-appearance: unset!important;
+  -webkit-appearance: unset!important;
+  -o-appearance: unset!important;
+  -ms-appearance: unset!important;
+}
+user agent stylesheet
+input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
+.name{
+  font-size: 16px
+}
+
+input[type=checkbox]:not(old)+label {
+    display: inline-block;
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+.label-agree-term {
+    color: #999;
+}
+
+.submit {
+  width: auto;
+  background: #4966b1;
+  color: #fff;
+  padding: 16px 17px;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 15px 0 rgba(73,102,177,.7);
+  -moz-box-shadow: 0 1px 15px 0 rgba(73,102,177,.7);
+  -webkit-box-shadow: 0 1px 15px 0 rgba(73,102,177,.7);
+  -o-box-shadow: 0 1px 15px 0 rgba(73,102,177,.7);
+  -ms-box-shadow: 0 1px 15px 0 rgba(73,102,177,.7);
+}
+
+.topp{
+  font-size: 13px;
+  line-height: 1.8;
+  color: #fff;
+ 
+  background-image: url(/img/tours/do-i-need-a-passport.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0;
+}

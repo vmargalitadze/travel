@@ -1,0 +1,38 @@
+<%- include('./part/head.ejs') %>
+
+<body class="topp">
+  <%- include('./part/nav.ejs') %>
+<div class="">
+  <div class="main">
+    <div class="col-lg-4 col-md-6">
+      
+      <div class="containerr">
+        <form  action="/signup" method="POST" class="appointment-form " id="appointment-form">
+        <% if (errorMessage) { %>
+          <div  class="user-message1 es1 user-message--error1 mb-2">
+            <%= errorMessage %>
+          </div>
+        <% } %>
+      <h2 style="margin-bottom: 15px;  color: black; font-size: 15px;"> “People don’t take trips, trips take people.”
+        ― John Steinbeck</h2>
+      <div class="form-group-1">
+        <input required placeholder="Name" type="text" name="name" id="namel" class="form-control form1">
+        <input required placeholder="Email" type="email" name="email" id="email" class="form-control form1">
+        <input required placeholder="Password" type="password" name="password" id="password" class="form-control form1">
+        <input required placeholder="Confirm Password" type="password" name="confirmPassword" id="confirmPassword" class="form1 form-control">
+      <div class="select-list">
+      
+      
+   
+      <div class="form-submit">
+        <button class="btn  button-secondary "  type="submit">Sign Up</button>
+        
+      </div>
+      </form>
+      </div>
+    </div>
+    </div>
+</div>
+
+<%- include('./part/script.ejs') %>
+</body>

@@ -1,0 +1,79 @@
+<%- include('./part/head.ejs') %>
+
+<html>
+    <body>
+        <%- include('./part/nav.ejs') %>
+
+        <div class="container1">
+          <h1>Mountain  - Where Nature Meets Adventure</h1>
+          <p class="pe">Mountains: Where Every Summit is a Triumph, Every Trail is an Adventure</p>
+        </div>
+        
+        <div class="blank">
+          <div class="he" style="margin: 0 auto;">
+            <h1 style=" color: white; font-size: 25px; ">J. R. R. Tolkien</h1>
+            <h2 style="color: white; font-size: 20px;">Not All Those Who Wander Are Lost</h2>
+          </div>
+        </div>
+        
+        <div class="container2 second">
+          <form id="searchForm" class="mb-5">
+            <input class="form-control form1" type="text" id="searchInput" placeholder="Enter tour name">
+            <button class="btn button button-secondary" type="submit">Search</button>
+          </form>
+        
+
+          
+          <div class="row" id="tourItemsContainer">
+            <% prods.forEach((travelItem, index) => { %>
+              <% if (travelItem.category === "Mountains") { %>
+          
+                <div class="col-lg-4 col-md-6 mb-3 tour-item">
+                  <div class="item1 w-100" style="position: relative !important;">
+                    <div class="img img-first">
+                      <img style="height: 200px; width: 100%;" src="<%= travelItem.images[0] %>" class="card-img-top img-fluid" alt="<%= travelItem.name %>">
+                    </div>
+                    <div class="w-100">
+                      <h3 class="tour-name"><%= travelItem.name %></h3>
+                      <% if (travelItem.discount > 0) { %>
+                        <span class="label-product label-sale">
+                          <span class="d-none">Sale</span>
+                          -<%= travelItem.discount %>%</span>
+                      <% } else { %>
+                        <span class="label-product d-none label-sale">
+                          <span class="d-none">Sale</span>
+                          -<%= travelItem.discount %>%</span>
+                      <% } %>
+                      <h3>
+                        <% if (travelItem.discount > 0) { %>
+                          $<%= (travelItem.discount / 100) * travelItem.price %>
+                        <% } else { %>
+                          $<%= travelItem.price %>
+                        <% } %>
+                      </h3>
+                      
+                      <a class="btn button button-secondary" href="/tours/<%= travelItem._id %>">
+                        Learn more
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+              <% } %>
+            <% }); %>
+          </div>
+        
+        
+          <%- include('./part/pagination.ejs') %>
+        </div>
+        
+      
+        
+
+        
+        
+        
+        <%- include('./part/footer.ejs') %>
+        
+          <%- include('./part/script.ejs') %>
+    </body>
+</html>

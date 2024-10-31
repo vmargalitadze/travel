@@ -1,0 +1,408 @@
+<%- include('./part/head.ejs') %>
+<body>
+  
+  <%- include('./part/nav.ejs') %>
+
+
+      <main>
+       <!--Main Slider Start-->
+<section class="main-slider">
+  <div class="swiper-container thm-swiper__slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="image-layer img-fluid" style="background-image: url(https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size: cover; background-position: center;">
+        </div>
+        
+        <!-- /.image-layer -->
+       
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="col-md-10">
+               
+                <h2 class="oh " data-caption-animate="slideInUp" data-caption-delay="100"><span>Explore</span><span class="fw-bold"> The World</span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+     
+    </div>
+
+   
+  </div>
+</section>
+
+<section class="section section-sm section-first bg-default text-md-start">
+  <div class="container">
+    <div class="row  align-items-center ">
+      <div class="col-xl-6 col-lg-6 col-md-6  ">
+        <img class="img-fluid" src="https://images.unsplash.com/photo-1491382825904-a4c6dca98e8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="556" height="382">
+      </div>
+      <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-6  text-center" data-wow-delay=".1s">
+        <div class="box-width-lg-470">
+          <h3 class="disc">Discover New Horizons</h3>
+          <!-- Bootstrap tabs-->
+          <div class="tabs-custom  tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 " id="tabs-7">
+            <!-- Nav tabs-->
+            <div class="d-flex justify-content-center mb-3">
+              <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" role="presentation"><a class="nav-link erti active" href="#tabs-7-1" data-bs-toggle="tab" aria-selected="true" role="tab">About us</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link erti" href="#tabs-7-2" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Why choose us</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link erti" href="#tabs-7-3" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Our mission</a></li>
+              </ul>
+          </div>
+          
+            <!-- Tab panes-->
+            <div class="rot">
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tabs-7-1" role="tabpanel">
+                  <p>Our Tour is committed to bringing our clients the best in value and quality travel arrangements. </p>
+                  
+                </div>
+                <div class="tab-pane fade" id="tabs-7-2" role="tabpanel">
+                  <p>We are proud to offer excellent quality and value for money in our tours.</p>
+                
+                </div>
+                <div class="tab-pane fade" id="tabs-7-3" role="tabpanel">
+                  <p>Our mission is to provide the Greatest Experience.</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="untree_co-section text-center">
+  <div class="container">
+    <div class="row text-center justify-content-center mb-5">
+      <div class="col-lg-7">
+        <h2 style="color: #151515;" class="section-title text-center">Popular Destination</h2>
+      </div>
+    </div>
+
+    <div class="owl-carousel owl-3-slider text-center owl-loaded owl-drag">
+      <div class="owl-stage-outer owl-height">
+        <div class="owl-stage">
+          <% prods.forEach((travelItem, index) => { %>
+            <% if (travelItem.favourite) { %>
+            <div class="owl-item text-center" style="width: 363.333px; margin-right: 10px;">
+              <div class="item">
+                <a class="media-thumb text-center"  href="/tours/<%= travelItem._id %>" style="position: relative !important;" >
+                  <div st class="media-text text-center">
+                    <h3 style="font-size: 1.3rem;"><%= travelItem.name %></h3>
+                    <% if (travelItem.discount > 0) { %>
+                      <span class="label-product1 label-sale1"><span class="d-none">Sale</span>
+                          -<%= travelItem.discount %>%</span>
+                  <% } else { %>
+                      <span class="label-product1 d-none label-sale1"><span class="d-none">Sale</span>
+                          -<%= travelItem.discount %>%</span>
+                  <% } %>
+                  
+                  </div>
+                  <img src="<%= travelItem.images[0] %>" alt="Image" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <% } %>
+            <% }); %>
+        </div>
+      </div>
+
+      <div class="owl-nav">
+        <div class="owl-prev"><span class="icon-keyboard_backspace"></span></div>
+        <div class="owl-next"><span class="icon-keyboard_backspace"></span></div>
+      </div>
+
+      <div class="owl-dots">
+        <% prods.forEach((travelItem, index) => { %>
+          <div class="owl-dot <%= index === 0 ? 'active' : '' %>" data-index="<%= index %>"><span></span></div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="section section-sm">
+  <div class="container">
+    <h3 style="  color: #151515;" class="text-center mb-5">Our Services</h3>
+    <div class="row row-30">
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+  
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" fill="#01b3a7" width="50" viewBox="0 0 512 512"><path d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1v9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1h1c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24v4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6H400c8.8 0 16 7.2 16 16s-7.2 16-16 16H379.3c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3h11.3c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16H454c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.7-15.4H251.4c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3v3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3H248c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"/></svg>
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">Travel Guide</h5>
+              <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+  
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" fill="#01b3a7" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">Wide Variety of Tours</h5>
+              <p class="box-icon-classic-text">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+  
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" fill="#01b3a7" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">Highly Qualified Service</h5>
+              <p class="box-icon-classic-text">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" fill="#01b3a7" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
+                
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">24/7 Support</h5>
+              <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+               
+                <svg xmlns="http://www.w3.org/2000/svg"  height="50" width="50" fill="#01b3a7" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 32C0 14.3 14.3 0 32 0H480c17.7 0 32 14.3 32 32s-14.3 32-32 32V448c17.7 0 32 14.3 32 32s-14.3 32-32 32H304V464c0-26.5-21.5-48-48-48s-48 21.5-48 48v48H32c-17.7 0-32-14.3-32-32s14.3-32 32-32V64C14.3 64 0 49.7 0 32zm96 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zM240 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H240zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H368c-8.8 0-16 7.2-16 16zM112 192c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H112zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H368zM328 384c13.3 0 24.3-10.9 21-23.8c-10.6-41.5-48.2-72.2-93-72.2s-82.5 30.7-93 72.2c-3.3 12.8 7.8 23.8 21 23.8H328z"/></svg>
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">Handpicked Hotels</h5>
+              <p class="box-icon-classic-text">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <article class="box-icon-classic">
+          <div class="unit box-icon-classic-body d-flex flex-row  text-center">
+            <div class="unit-left">
+              <div class="box-icon-classic-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" fill="#01b3a7" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+              
+              </div>
+            </div>
+            <div class="unit-body">
+              <h5 class="box-icon-classic-title">Best Price Guarantee</h5>
+              <p class="box-icon-classic-text">If you find tours that are cheaper than ours, we will compensate the difference.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+    </div>
+  </div>
+  </section>
+  
+  <section class="places">
+    <div class="row  mb-5">
+    
+      <section class="dark">
+        <div class="container py-4">
+          <h1 class="h1 text-center text-white" id="pageHeaderTitle">Travel categories</h1>
+      
+          <a class="postcard__img_link" href="/mountain">
+          <article class="postcard dark blue">
+              <img class="postcard__img" src="https://images.unsplash.com/photo-1635361171696-7bf89b4b9d68?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Title" />
+              <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="/mountain">Mountains</a></h1>
+                
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">In the embrace of majestic peaks, find solace in the whispers of the wind and the echoes of adventure. Every summit reached is a triumph of spirit and a dance with the clouds.</div>
+                
+              </div>
+            </a>
+  
+  
+          </article>
+          <article class="postcard dark red">
+            <a class="postcard__img_link" href="/beach">
+              <img class="postcard__img" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Title" />	
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title red"><a href="/beach">Tropical Havens</a></h1>
+             
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">Underneath the palm trees' sway, discover a paradise where the sun kisses the waves and time gently loses its way. In tropical havens, let every moment be a breeze of serenity and a splash of vibrant hues.</div>
+             
+            </div>
+          </article>
+          <article class="postcard dark green">
+            <a class="postcard__img_link" href="/city">
+              <img class="postcard__img" src="https://images.unsplash.com/photo-1516900557549-41557d405adf?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title green"><a href="/city">Urban Discoveries</a></h1>
+              
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">Amidst the urban labyrinth, uncover the heartbeat of cities – a symphony of cultures, the rhythm of innovation, and the pulse of endless possibilities. In the streets and skyscrapers, find the artistry of urban discovery.</div>
+             
+            </div>
+          </article>
+       
+        </div>
+      </section>
+   
+      
+    </div>
+  </section>
+
+<div class="feature-area mt-120 p-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="section-head pb-60">
+          <h5>Feature Tours</h5>
+          <h2>See Our Best Popular Package</h2>
+          </div>
+
+      </div>
+    </div>
+    <div class="row" id="tourItemsContainer">
+      <% prods.forEach((travelItem, index) => { %>
+        <% if (travelItem.discount > 0) { %>
+          <div class="col-lg-4 col-md-4 mb-3 d-flex">
+            <div class="itema w-100" style="position: relative !important;">
+              <div class="img img-first">
+                <img style="height: 200px; width: 100%;" src="<%= travelItem.images[0] %>" class="card-img-top img-fluid" alt="<%= travelItem.name %>">
+              </div>
+              <div style="color: #151515;">
+                <h3 class="tour-name">Name: <%= travelItem.name %></h3>
+                <% if (travelItem.discount > 0) { %>
+                  <span class="label-product label-sale"><span class="d-none">Sale</span>
+                  
+
+
+                    -<%= travelItem.discount %>%</span>
+                
+                <% } else { %>
+                  <span class="label-product d-none label-sale"><span class="d-none">Sale</span>
+                  
+
+
+                  -<%= travelItem.discount %>%</span>
+                <% } %>
+                <h3>  <% if (travelItem.discount > 0) { %>
+                New Price:  $<%= (travelItem.discount / 100) * travelItem.price %>
+                <% } else { %>
+                  $<%= travelItem.price %>
+                <% } %></h3>
+                <a class="btn button button-secondary" href="/tours/<%= travelItem._id %>">  
+                  Learn more
+                 
+                  </a>
+
+              </div>
+              <!-- <div class="w-100">
+                <h3 class="tour-name"><%= travelItem.name %></h3>
+                <% if (travelItem.discount > 0) { %>
+                  <span class="label-product label-sale">
+                    <span class="d-none">Sale</span>
+                    -<%= travelItem.discount %>%</span>
+                <% } else { %>
+                  <span class="label-product d-none label-sale">
+                    <span class="d-none">Sale</span>
+                    -<%= travelItem.discount %>%</span>
+                <% } %>
+                <h3>
+                  <% if (travelItem.discount > 0) { %>
+                    $<%= (travelItem.discount / 100) * travelItem.price %>
+                  <% } else { %>
+                    $<%= travelItem.price %>
+                  <% } %>
+                </h3>
+                <a class="btn button button-secondary" href="/tours/<%= travelItem._id %>">
+                  Learn more
+                </a>
+              </div> -->
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+    </div>
+
+ 
+  </div>
+</div>
+
+<section class="section-sm bg-default text-center offset-top-50">
+  <div class="parallax-container" style="background-image: url(/img/tours/parallax-1-1920x850.jpg);" >
+   
+  <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
+    <div class="container">
+      <div  class="mt d-flex flex-column justify-content-center align-items-center text-center">
+
+        <h2 class="aq oh fw-normal wow slideInDown" style="visibility: visible; animation-name: slideInDown;">
+          <span class="d-block ">First-class Impressions</span>
+          <span class="d-block fw-light">are Waiting for You!</span>
+        </h2>
+        <p class="meore text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          Our agency offers  various tours and excursions  all over the world. Browse our website to find your dream tour!
+        </p>
+        <a class="btn  button-secondary" href="/signup">Go Create Account</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+      </main>
+
+
+
+      <%- include('./part/footer.ejs') %>
+      <%- include('./part/script.ejs') %>
+</body>
+</html>

@@ -1,0 +1,240 @@
+.breadcrumbs-custom {
+    position: relative;
+    overflow: hidden;
+}
+[class*='bg-overlay-'] {
+    position: relative;
+}
+[class*='bg-'] {
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-overlay-46::before {
+    background: rgba(43, 49, 59, 0.2);
+}
+[class*='bg-overlay-']::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+[class*='bg-overlay-'] .section-single-inner, [class*='bg-overlay-'] .container {
+    position: relative;
+}
+.breadcrumbs-custom-path {
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 14px;
+    line-height: 1.33;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+}
+.breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.breadcrumbs-custom-path > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul li, ol li {
+    display: block;
+}
+
+.breadcrumbs-custom-path a {
+    display: inline;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.breadcrumbs-custom-path li.active {
+    color: rgba(255, 255, 255, 0.53);
+}
+.breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.breadcrumbs-custom-path > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.box-position {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + 150px);
+    height: calc(100% + 150px);
+    will-change: transform;
+    animation: bgPos 100s linear infinite;
+    transform: translate3d(-75px, -75px, 0) rotate(0.001deg);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.desktop .oh-desktop {
+    overflow: hidden;
+}
+.thumbnail-joan {
+    text-align: center;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.thumbnail {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+    .single-project-4 {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .single-project {
+        text-align: left;
+    }
+    
+}
+
+.title-decoration-lines-bottom {
+    position: relative;
+    line-height: 1.2;
+}
+ 
+.single-tour-price .product-big-price-wrap {
+    right: 16px;
+}
+
+.product-big-price-wrap {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    padding: 8px 10px 6px;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    background: transparent;
+    z-index: 1;
+}
+
+.product-big-price-wrap::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 14px;
+    width: 400%;
+    height: 100%;
+    background: #413c3c !important;
+    transform: skew(45deg);
+    transform-origin: 50% 100%;
+    will-change: transform;
+    pointer-events: none;
+    z-index: -1;
+}
+.product-big-price {
+    font-size: 21px;
+    letter-spacing: .025em;
+    color: #ffffff;
+}
+
+.title-decoration-lines-bottom span {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-top: 20px;
+}
+
+.title-decoration-lines-bottom span::after {
+    display: inline-block;
+    content: '';
+    bottom: 0;
+    height: 4px;
+    width: 70px;
+    background: #413c3c;
+}
+
+.divider-30 {
+    margin: 30px 0;
+}
+.divider {
+    font-size: 0;
+    line-height: 0;
+    height: 1px;
+    width: 100%;
+    background: #e1e1e1;
+}
+
+.list-description {
+    text-align: left;
+}
+.divider + * {
+    margin-top: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnail-joan {
+    text-align: center;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.thumbnail-joan::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 46, 68, 0.37);
+    z-index: 1;
+}
+.thumbnail-joan::before {
+    position: absolute;
+    content: '';
+    transition: inherit;
+    pointer-events: none;
+}
+
+.thumbnail-joan-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.desktop .thumbnail-joan-title {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    transform: translate3d(0, 10px, 0);
+    color: #ffffff;
+}
